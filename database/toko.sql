@@ -1,6 +1,6 @@
 /*
 SQLyog Ultimate v12.4.3 (64 bit)
-MySQL - 10.1.36-MariaDB : Database - travel
+MySQL - 10.1.38-MariaDB : Database - toko
 *********************************************************************
 */
 
@@ -12,9 +12,9 @@ MySQL - 10.1.36-MariaDB : Database - travel
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`travel` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`toko` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
-USE `travel`;
+USE `toko`;
 
 /*Table structure for table `bayar` */
 
@@ -46,25 +46,6 @@ CREATE TABLE `data_armada` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `data_armada` */
-
-/*Table structure for table `data_jadwal` */
-
-DROP TABLE IF EXISTS `data_jadwal`;
-
-CREATE TABLE `data_jadwal` (
-  `id_jadwal` varchar(20) NOT NULL,
-  `nama_jurusan` varchar(20) DEFAULT NULL,
-  `harga` int(20) DEFAULT NULL,
-  `jam_berangkat` int(20) DEFAULT NULL,
-  `kapasitas` varchar(20) DEFAULT NULL,
-  PRIMARY KEY (`id_jadwal`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-/*Data for the table `data_jadwal` */
-
-insert  into `data_jadwal`(`id_jadwal`,`nama_jurusan`,`harga`,`jam_berangkat`,`kapasitas`) values 
-('JDWL-000001','JOGJA-KEBUMEN',70000,20,'10'),
-('JDWL-000002','JOGJA-MAJENANG',100000,10,'20');
 
 /*Table structure for table `data_jurusan` */
 
@@ -101,11 +82,6 @@ CREATE TABLE `data_karyawan` (
 
 /*Data for the table `data_karyawan` */
 
-insert  into `data_karyawan`(`id_karyawan`,`nama_karyawan`,`jabatan`,`jenis_kelamin`,`alamat`,`no_telp`) values 
-('KRY-000002','kmji','Operator','Perempuan','kio',79),
-('KRY-000003','uyguyg','Super Admin','Laki - Laki','ytgrf',987),
-('KRY-000004','dsd','Operator','Perempuan','efe',212);
-
 /*Table structure for table `data_pelanggan` */
 
 DROP TABLE IF EXISTS `data_pelanggan`;
@@ -120,10 +96,6 @@ CREATE TABLE `data_pelanggan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `data_pelanggan` */
-
-insert  into `data_pelanggan`(`id_pelanggan`,`nama_pelanggan`,`jenis_kelamin`,`alamat`,`no_telp`) values 
-('PLG-000002','fsf','Laki-laki','sdfsf',32432),
-('PLG-000003','jhj','Perempuan','khh',868);
 
 /*Table structure for table `data_supir` */
 
@@ -262,6 +234,19 @@ insert  into `jurusan`(`id_jurusan`,`nama_jurusan`) values
 ('JUR-1004 ','JOGJA-KR.PCUNG'),
 ('JUR-1005 ','JOGJA-MAJENANG');
 
+/*Table structure for table `kategori` */
+
+DROP TABLE IF EXISTS `kategori`;
+
+CREATE TABLE `kategori` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_kategori` varchar(20) DEFAULT NULL,
+  `nama` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `kategori` */
+
 /*Table structure for table `pembatalan` */
 
 DROP TABLE IF EXISTS `pembatalan`;
@@ -310,6 +295,24 @@ CREATE TABLE `pembelian` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `pembelian` */
+
+/*Table structure for table `produk` */
+
+DROP TABLE IF EXISTS `produk`;
+
+CREATE TABLE `produk` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_produk` varchar(20) DEFAULT NULL,
+  `nama` varchar(20) DEFAULT NULL,
+  `id_kategori` varchar(20) DEFAULT NULL,
+  `harga` float DEFAULT NULL,
+  `stok` varchar(20) DEFAULT NULL,
+  `ket` text,
+  `gambar` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `produk` */
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
