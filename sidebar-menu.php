@@ -32,12 +32,12 @@ if ($_SESSION['hak_akses']=='Super Admin') { ?>
       <li><a href="?module=pelanggan"><i class="fa fa-circle-o"></i> Pelanggan </a></li>
       <li><a href="?module=produk"><i class="fa fa-circle-o"></i> Produk </a></li>
       <li><a href="?module=kategori"><i class="fa fa-circle-o"></i> Kategori </a></li>
-      <li><a href="?module=produk"><i class="fa fa-circle-o"></i> Diskon </a></li>
-      <li><a href="?module=produk"><i class="fa fa-circle-o"></i> Ongkir </a></li>
-      <li><a href="?module=produk"><i class="fa fa-circle-o"></i> Provinsi </a></li>
-      <li><a href="?module=produk"><i class="fa fa-circle-o"></i> Kabupaten/Kota </a></li>
-      <li><a href="?module=produk"><i class="fa fa-circle-o"></i> Kecamatan </a></li>
-      <li><a href="?module=produk"><i class="fa fa-circle-o"></i> Desa </a></li>
+      <li><a href="?module=diskon"><i class="fa fa-circle-o"></i> Diskon </a></li>
+      <li><a href="?module=ongkir"><i class="fa fa-circle-o"></i> Ongkir </a></li>
+      <li><a href="?module=provinsi"><i class="fa fa-circle-o"></i> Provinsi </a></li>
+      <li><a href="?module=kabupaten"><i class="fa fa-circle-o"></i> Kabupaten/Kota </a></li>
+      <li><a href="?module=kecamatan"><i class="fa fa-circle-o"></i> Kecamatan </a></li>
+      <li><a href="?module=desa"><i class="fa fa-circle-o"></i> Desa </a></li>
     </ul>
   </li>
   <?php
@@ -53,12 +53,12 @@ if ($_SESSION['hak_akses']=='Super Admin') { ?>
        <li><a href="?module=pelanggan"><i class="fa fa-circle-o"></i> Pelanggan </a></li>
       <li><a href="?module=produk"><i class="fa fa-circle-o"></i> Produk </a></li>
       <li><a href="?module=kategori"><i class="fa fa-circle-o"></i> Kategori </a></li>
-      <li><a href="?module=produk"><i class="fa fa-circle-o"></i> Diskon </a></li>
-      <li><a href="?module=produk"><i class="fa fa-circle-o"></i> Ongkir </a></li>
-      <li><a href="?module=produk"><i class="fa fa-circle-o"></i> Provinsi </a></li>
-      <li><a href="?module=produk"><i class="fa fa-circle-o"></i> Kabupaten/Kota </a></li>
-      <li><a href="?module=produk"><i class="fa fa-circle-o"></i> Kecamatan </a></li>
-      <li><a href="?module=produk"><i class="fa fa-circle-o"></i> Desa </a></li>
+      <li><a href="?module=diskon"><i class="fa fa-circle-o"></i> Diskon </a></li>
+      <li><a href="?module=ongkir"><i class="fa fa-circle-o"></i> Ongkir </a></li>
+      <li><a href="?module=provinsi"><i class="fa fa-circle-o"></i> Provinsi </a></li>
+      <li><a href="?module=kabupaten"><i class="fa fa-circle-o"></i> Kabupaten/Kota </a></li>
+      <li><a href="?module=kecamatan"><i class="fa fa-circle-o"></i> Kecamatan </a></li>
+      <li><a href="?module=desa"><i class="fa fa-circle-o"></i> Desa </a></li>
     </ul>
   </li>
   <?php
@@ -74,12 +74,12 @@ if ($_SESSION['hak_akses']=='Super Admin') { ?>
        <li><a href="?module=pelanggan"><i class="fa fa-circle-o"></i> Pelanggan </a></li>
       <li><a href="?module=produk"><i class="fa fa-circle-o"></i> Produk </a></li>
       <li><a href="?module=kategori"><i class="fa fa-circle-o"></i> Kategori </a></li>
-      <li><a href="?module=produk"><i class="fa fa-circle-o"></i> Diskon </a></li>
-      <li><a href="?module=produk"><i class="fa fa-circle-o"></i> Ongkir </a></li>
-      <li><a href="?module=produk"><i class="fa fa-circle-o"></i> Provinsi </a></li>
-      <li><a href="?module=produk"><i class="fa fa-circle-o"></i> Kabupaten/Kota </a></li>
-      <li><a href="?module=produk"><i class="fa fa-circle-o"></i> Kecamatan </a></li>
-      <li><a href="?module=produk"><i class="fa fa-circle-o"></i> Desa </a></li>
+      <li><a href="?module=diskon"><i class="fa fa-circle-o"></i> Diskon </a></li>
+      <li><a href="?module=ongkir"><i class="fa fa-circle-o"></i> Ongkir </a></li>
+      <li><a href="?module=provinsi"><i class="fa fa-circle-o"></i> Provinsi </a></li>
+      <li><a href="?module=kabupaten"><i class="fa fa-circle-o"></i> Kabupaten/Kota </a></li>
+      <li><a href="?module=kecamatan"><i class="fa fa-circle-o"></i> Kecamatan </a></li>
+      <li><a href="?module=desa"><i class="fa fa-circle-o"></i> Desa </a></li>
     </ul>
   </li>
   <?php

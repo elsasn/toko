@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Login | Estu Trans</title>
+    <title>Login | TOKO EKO</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="description" content="Website Estu Trans">
@@ -26,7 +26,8 @@
   <body class="login-page bg-login">
     <div class="login-box">
       <div style="color:#3c8dbc" class="login-logo">
-        <img style="margin-top:-12px" src="assets/img/logo.png" alt="Logo" height="50"> <b></b>
+        <h3>TOKO ONLINE EKO</h3>
+        <!-- <img style="margin-top:-12px" src="assets/img/logo.png" alt="Logo" height="50"> <b></b> -->
       </div><!-- /.login-logo -->
       <?php  
       // fungsi untuk menampilkan pesan
