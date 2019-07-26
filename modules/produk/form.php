@@ -85,10 +85,18 @@ if ($_GET['form']=='add') { ?>
                 </div>
               </div>
             </div>
+
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Keterangan Produk</label>
+              <div class="col-sm-5">
+                <textarea type="text" class="form-control" name="ket" required></textarea>
+              </div>
+            </div>
+
             <div class="form-group">
               <label class="col-sm-2 control-label">Gambar</label>
               <div class="col-sm-5">
-                <input type="file" name="foto" id="foto">
+                <input type="file" name="gambar" id="gambar">
                 <br/>
                 
               </div>

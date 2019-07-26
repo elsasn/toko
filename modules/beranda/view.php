@@ -16,7 +16,7 @@
         <div class="alert alert-info alert-dismissable">
           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
           <p style="font-size:15px">
-            <i class="icon fa fa-user"></i> Selamat datang <strong><?php echo $_SESSION['nama_user']; ?></strong> di Estu Trans 
+            <i class="icon fa fa-user"></i> Selamat datang <strong><?php echo $_SESSION['nama_user']; ?></strong> di TOKO EKO 
           </p>        
         </div>
       </div>
@@ -102,7 +102,15 @@
           <div class="icon">
             <i class="fa fa-file-text-o"></i>
           </div>
-          <a href="?module=lap_stok" class="small-box-footer" title="Cetak Laporan" data-toggle="tooltip"><i class="fa fa-print"></i></a>
+          <?php  
+          if ($_SESSION['hak_akses']!='Manajer') { ?>
+            <a href="?module=form_obat&form=add" class="small-box-footer" title="Tambah Data" data-toggle="tooltip"><i class="fa fa-plus"></i></a>
+          <?php
+          } else { ?>
+            <a class="small-box-footer"><i class="fa"></i></a>
+          <?php
+          }
+          ?>
         </div>
       </div><!-- ./col -->
 
@@ -124,7 +132,15 @@
           <div class="icon">
             <i class="fa fa-clone"></i>
           </div>
-          <a href="?module=lap_obat_masuk" class="small-box-footer" title="Cetak Laporan" data-toggle="tooltip"><i class="fa fa-print"></i></a>
+          <?php  
+          if ($_SESSION['hak_akses']!='Manajer') { ?>
+            <a href="?module=form_obat&form=add" class="small-box-footer" title="Tambah Data" data-toggle="tooltip"><i class="fa fa-plus"></i></a>
+          <?php
+          } else { ?>
+            <a class="small-box-footer"><i class="fa"></i></a>
+          <?php
+          }
+          ?>
         </div>
       </div><!-- ./col -->
     </div><!-- /.row -->
