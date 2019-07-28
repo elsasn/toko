@@ -1,89 +1,90 @@
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Login | TOKO EKO</title>
-    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="description" content="Website Estu Trans">
+<?php
+if(!isset($_SESSION)){
+	session_start();
+}
+include 'header.php';
+include 'top_header.php';
+include 'koneksi.php';
+include 'sidebar.php';
+?>
 
-    <!-- favicon -->
-    <link rel="shortcut icon" href="assets/img/favicon.png" />
+			<div class="col-sm-9 padding-right">
+				<div class="features_items"><!--features_items-->
+				<h2 class="title text-center">Features Items</h2>
+				<div class="product-image-wrapper">
+					<?php
+						$produk = "SELECT * FROM produk";
+						if (isset($_GET['k'])) {
+							$produk .= " WHERE id_kategori='$_GET[k]'";
+						}
+						if(isset($_GET['c'])){
+							$produk .= " WHERE nama LIKE '%$_GET[c]%'";
+						}
+						$ambil = $koneksi->query($produk);
+					while ($perproduk = $ambil->fetch_assoc()) { ?>
+					<div class="product_item is_new">
+						<div class="col-md-20">
+							<div class="product_image d-flex flex-column align-items-center justify-content-center" width='100px' height='10px'><img  width='90px' height='100px' src="admin/images/<?php echo $perproduk['gambar'];?>"></div>
+							<div class="product_content">
+								<div class="product_name"><div><a href="#" tabindex="0"><?php echo $perproduk['nama'];?></a>
+							</div></div>
+							<h6>Stok :<?php echo $perproduk['stok'];?></h6>
+							<div class="product_price">Rp. <?php echo number_format($perproduk['harga']); ?></div>
+							<a href="beli.php?id=<?php echo $perproduk['id_produk'];?>"
+							class="btn btn-primary">Beli</a>
+							<a href="detail.php?id=<?php echo $perproduk['id_produk'];?>"
+							class="btn btn-default">Detail</a> </center>
 
-    <!-- Bootstrap 3.3.2 -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <!-- Font Awesome Icons -->
-    <link href="assets/plugins/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <!-- Theme style -->
-    <link href="assets/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
-    <!-- iCheck -->
-    <link href="assets/plugins/iCheck/square/blue.css" rel="stylesheet" type="text/css" />
-    <!-- Custom CSS -->
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
-
-  </head>
-  <body class="login-page bg-login">
-    <div class="login-box">
-      <div style="color:#3c8dbc" class="login-logo">
-        <h3>TOKO ONLINE EKO</h3>
-        <!-- <img style="margin-top:-12px" src="assets/img/logo.png" alt="Logo" height="50"> <b></b> -->
-      </div><!-- /.login-logo -->
-      <?php  
-      // fungsi untuk menampilkan pesan
-      // jika alert = "" (kosong)
-      // tampilkan pesan "" (kosong)
-      if (empty($_GET['alert'])) {
-        echo "";
-      } 
-      // jika alert = 1
-      // tampilkan pesan Gagal "Username atau Password salah, cek kembali Username dan Password Anda"
-      elseif ($_GET['alert'] == 1) {
-        echo "<div class='alert alert-danger alert-dismissable'>
-                <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
-                <h4>  <i class='icon fa fa-times-circle'></i> Gagal Login!</h4>
-                Username atau Password salah, cek kembali Username dan Password Anda.
-              </div>";
-      }
-      // jika alert = 2
-      // tampilkan pesan Sukses "Anda telah berhasil logout"
-      elseif ($_GET['alert'] == 2) {
-        echo "<div class='alert alert-success alert-dismissable'>
-                <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
-                <h4>  <i class='icon fa fa-check-circle'></i> Sukses!</h4>
-                Anda telah berhasil logout.
-              </div>";
-      }
-      ?>
-
-      <div class="login-box-body">
-        <p class="login-box-msg"><i class="fa fa-user icon-title"></i> Silahkan Login</p>
-        <br/>
-        <form action="login-check.php" method="POST">
-          <div class="form-group has-feedback">
-            <input type="text" class="form-control" name="username" placeholder="Username" autocomplete="off" required />
-            <span class="glyphicon glyphicon-user form-control-feedback"></span>
-          </div>
-
-          <div class="form-group has-feedback">
-            <input type="password" class="form-control" name="password" placeholder="Password" required />
-            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-          </div>
-          <br/>
-          <div class="row">
-            <div class="col-xs-12">
-              <input type="submit" class="btn btn-primary btn-lg btn-block btn-flat" name="login" value="Login" />
-            </div><!-- /.col -->
-          </div>
-        </form>
-
-      </div><!-- /.login-box-body -->
-    </div><!-- /.login-box -->
-
-    <!-- jQuery 2.1.3 -->
-    <script src="assets/plugins/jQuery/jQuery-2.1.3.min.js"></script>
-    <!-- Bootstrap 3.3.2 JS -->
-    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-
-  </body>
+							
+						</div>
+						
+					</div>
+				</div><br>
+				<?php } ?>
+				
+			</div>
+		
+			</div><!--features_items-->
+			
+			
+			
+		</div>
+	</div>
+</div>
+</section>
+<footer id="footer"><!--Footer-->
+<div class="footer-top">
+<div class="container">
+	
+<div class="footer-widget">
+<div class="container">
+	<div class="row">
+		<div class="col-sm-2">
+			<div class="single-widget">
+				<h2>Our Address</h2>
+				<h3>Alamat Alamat Alamat Alamat Alamat Alamat</h3>
+			</div>
+		</div>
+		
+		
+	</div>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="container">
+	<div class="row">
+		<p class="pull-left">Copyright © 2018 E-SHOPPER Inc. All rights reserved.</p>
+		<p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
+	</div>
+</div>
+</div>
+</footer><!--/Footer-->
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.scrollUp.min.js"></script>
+<script src="assets/js/price-range.js"></script>
+<script src="assets/js/jquery.prettyPhoto.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
 </html>
