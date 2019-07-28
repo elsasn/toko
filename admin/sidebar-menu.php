@@ -93,7 +93,7 @@ if ($_SESSION['hak_akses']=='Super Admin') { ?>
     <ul class="treeview-menu">
       <li class="active"><a href="?module=pembelian"><i class="fa fa-circle-o"></i> Pembelian </a></li>
       <li class="active"><a href="?module=pembayaran"><i class="fa fa-circle-o"></i> Pembayaran </a></li>
-      <li class="active"><a href="?module=pembelian"><i class="fa fa-circle-o"></i> Pembatalan </a></li>
+      <li class="active"><a href="?module=pengiriman"><i class="fa fa-circle-o"></i> Pengiriman </a></li>
     </ul>
   </li>
   <?php
@@ -107,7 +107,7 @@ if ($_SESSION['hak_akses']=='Super Admin') { ?>
     <ul class="treeview-menu">
       <li class="active"><a href="?module=pembelian"><i class="fa fa-circle-o"></i> Pembelian </a></li>
       <li class="active"><a href="?module=pembayaran"><i class="fa fa-circle-o"></i> Pembayaran </a></li>
-      <li class="active"><a href="?module=pembatalan"><i class="fa fa-circle-o"></i> Pembatalan </a></li>
+      <li class="active"><a href="?module=pengiriman"><i class="fa fa-circle-o"></i> Pengiriman </a></li>
     </ul>
   </li>
   <?php
@@ -121,7 +121,7 @@ if ($_SESSION['hak_akses']=='Super Admin') { ?>
     <ul class="treeview-menu">
       <li class="active"><a href="?module=pembelian"><i class="fa fa-circle-o"></i> Pembelian </a></li>
       <li class="active"><a href="?module=pembayaran"><i class="fa fa-circle-o"></i> Pembayaran </a></li>
-      <li class="active"><a href="?module=pembatalan"><i class="fa fa-circle-o"></i> Pembatalan </a></li>
+      <li class="active"><a href="?module=pengiriman"><i class="fa fa-circle-o"></i> Pengiriman </a></li>
     </ul>
   </li>
   <?php
@@ -135,7 +135,7 @@ if ($_SESSION['hak_akses']=='Super Admin') { ?>
     <ul class="treeview-menu">
       <li class="active"><a href="?module=lap-pembelian"><i class="fa fa-circle-o"></i> Laporan pembelian </a></li>
       <li><a href="?module=lap-pembayaran"><i class="fa fa-circle-o"></i> Laporan Pembayaran </a></li>
-      <li><a href="?module=lap-pembatalan"><i class="fa fa-circle-o"></i> Laporan Pembatalan </a></li>
+      <li><a href="?module=lap-pengiriman"><i class="fa fa-circle-o"></i> Laporan pengiriman </a></li>
       
     </ul>
   </li>
@@ -150,7 +150,7 @@ if ($_SESSION['hak_akses']=='Super Admin') { ?>
     <ul class="treeview-menu">
       <li class="active"><a href="?module=lap-pembelian"><i class="fa fa-circle-o"></i> Laporan pembelian </a></li>
       <li><a href="?module=lap-pembayaran"><i class="fa fa-circle-o"></i> Laporan Pembayaran </a></li>
-      <li><a href="?module=lap-pembatalan"><i class="fa fa-circle-o"></i> Laporan Pembatalan </a></li>
+      <li><a href="?module=lap-pengiriman"><i class="fa fa-circle-o"></i> Laporan pengiriman </a></li>
     </ul>
   </li>
   <?php
@@ -164,7 +164,7 @@ if ($_SESSION['hak_akses']=='Super Admin') { ?>
     <ul class="treeview-menu">
       <li class="active"><a href="?module=lap-pembelian"><i class="fa fa-circle-o"></i> Grafik pembelian </a></li>
       <li><a href="?module=lap-pembayaran"><i class="fa fa-circle-o"></i> Grafik Pembayaran </a></li>
-      <li><a href="?module=lap-pembatalan"><i class="fa fa-circle-o"></i> Grafik Pembatalan </a></li>
+      <li><a href="?module=lap-pengiriman"><i class="fa fa-circle-o"></i> Grafik pengiriman </a></li>
       
     </ul>
   </li>
@@ -179,7 +179,7 @@ if ($_SESSION['hak_akses']=='Super Admin') { ?>
     <ul class="treeview-menu">
       <li class="active"><a href="?module=lap-pembelian"><i class="fa fa-circle-o"></i> Grafik pembelian </a></li>
       <li><a href="?module=lap-pembayaran"><i class="fa fa-circle-o"></i> Grafik Pembayaran </a></li>
-      <li><a href="?module=lap-pembatalan"><i class="fa fa-circle-o"></i> Grafik Pembatalan </a></li>
+      <li><a href="?module=lap-pengiriman"><i class="fa fa-circle-o"></i> Grafik pengiriman </a></li>
     </ul>
   </li>
   <?php
@@ -194,7 +194,7 @@ if ($_SESSION['hak_akses']=='Super Admin') { ?>
     <ul class="treeview-menu">
       <li class="active"><a href="?module=lap-pembelian"><i class="fa fa-circle-o"></i> Grafik pembelian </a></li>
       <li><a href="?module=lap-pembayaran"><i class="fa fa-circle-o"></i> Grafik Pembayaran </a></li>
-      <li><a href="?module=lap-pembatalan"><i class="fa fa-circle-o"></i> Grafik Pembatalan </a></li>
+      <li><a href="?module=lap-pengiriman"><i class="fa fa-circle-o"></i> Grafik pengiriman </a></li>
       
     </ul>
   </li>
@@ -263,7 +263,7 @@ elseif ($_SESSION['hak_akses']=='Owner') { ?>
     <ul class="treeview-menu">
       <li class="active"><a href="?module=lap-pembelian"><i class="fa fa-circle-o"></i> Laporan Pembelian </a></li>
       <li><a href="?module=lap-pembayaran"><i class="fa fa-circle-o"></i> Laporan Pembayaran </a></li>
-      <li><a href="?module=lap-pembatalan"><i class="fa fa-circle-o"></i> Laporan Pembatalan </a></li>
+      <li><a href="?module=lap-pengiriman"><i class="fa fa-circle-o"></i> Laporan pengiriman </a></li>
     </ul>
   </li>
   <?php
@@ -277,7 +277,7 @@ elseif ($_SESSION['hak_akses']=='Owner') { ?>
     <ul class="treeview-menu">
       <li><a href="?module=lap-pembelian"><i class="fa fa-circle-o"></i> Laporan Pembelian </a></li>
       <li class="active"><a href="?module=lap-pembayaran"><i class="fa fa-circle-o"></i> Laporan Pembayaran </a></li>
-      <li class="active"><a href="?module=lap-pembatalan"><i class="fa fa-circle-o"></i> Laporan Pembatalan </a></li>
+      <li class="active"><a href="?module=lap-pengiriman"><i class="fa fa-circle-o"></i> Laporan pengiriman </a></li>
     </ul>
   </li>
   <?php
@@ -291,7 +291,7 @@ elseif ($_SESSION['hak_akses']=='Owner') { ?>
     <ul class="treeview-menu">
       <li><a href="?module=lap-pembelian"><i class="fa fa-circle-o"></i> Laporan Pembelian </a></li>
       <li><a href="?module=lap-pembayaran"><i class="fa fa-circle-o"></i> Laporan Pembayaran </a></li>
-      <li><a href="?module=lap-pembatalan"><i class="fa fa-circle-o"></i> Laporan Pembatalan </a></li>
+      <li><a href="?module=lap-pengiriman"><i class="fa fa-circle-o"></i> Laporan pengiriman </a></li>
     </ul>
   </li>
   <?php
@@ -346,7 +346,7 @@ if ($_SESSION['hak_akses']=='Operator') { ?>
     <ul class="treeview-menu">
       <li class="active"><a href="?module=pembelian"><i class="fa fa-circle-o"></i> Pembelian </a></li>
       <li class="active"><a href="?module=pembayaran"><i class="fa fa-circle-o"></i> Pembayaran </a></li>
-      <li class="active"><a href="?module=pembatalan"><i class="fa fa-circle-o"></i> Pembatalan </a></li>
+      <li class="active"><a href="?module=pengiriman"><i class="fa fa-circle-o"></i> pengiriman </a></li>
       <!--  <li><a href="?module=pembayaran"><i class="fa fa-circle-o"></i> Pembayaran </a></li> -->
       
     </ul>
