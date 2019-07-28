@@ -60,11 +60,14 @@
             <thead>
               <tr>
                 <th class="center">No.</th>
-                <th class="center">Kode ongkir</th>
-                <th class="center">Nama ongkir</th>
-                <th class="center">Jumlah Potongan</th>
-                <th class="center">Status ongkir</th>
-                
+                <th class="center">Kode Ongkir</th>
+                <th class="center">Nama Ongkir</th>
+                <th class="center">Nama Provinsi</th>
+                <th class="center">Nama Kabupaten</th>
+                <th class="center">Nama Kecamatan</th>
+                <th class="center">Jenis Ongkir</th>
+                <th class="center">Harga Ongkir</th>
+              
                 <th class="center">Action</th>
                 
               </tr>
@@ -86,8 +89,11 @@
                       <td width='50' class='center'>$no</td>
                       <td width='150' class='center'>$data[id_ongkir]</td>
                       <td width='180'class='center'>$data[nama]</td>
-                      <td width='180'class='center'>$data[potongan]</td>
-                      <td width='150' class='center'>$data[status]</td>
+                      <td width='180'class='center'>$data[province_id]</td>
+                      <td width='180'class='center'>$data[regency_id]</td>
+                      <td width='180'class='center'>$data[distric_id]</td>
+                      <td width='180'class='center'>$data[jenis_ongkir]</td>
+                      <td width='150' class='center'>$data[harga]</td>
                       
                       <td class='center' width='100'>
                         <div>
