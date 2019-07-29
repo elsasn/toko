@@ -16,23 +16,6 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/`toko` /*!40100 DEFAULT CHARACTER SET la
 
 USE `toko`;
 
-/*Table structure for table `bayar` */
-
-DROP TABLE IF EXISTS `bayar`;
-
-CREATE TABLE `bayar` (
-  `id_bayar` varchar(20) NOT NULL,
-  `id_pembelian` varchar(20) DEFAULT NULL,
-  `id_jurusan` varchar(20) DEFAULT NULL,
-  `subtotal` int(50) DEFAULT NULL,
-  `jumlah_bayar` int(50) DEFAULT NULL,
-  `jenis_bayar` varchar(20) DEFAULT NULL,
-  `status` enum('Lunas','Belum Lunas') DEFAULT 'Lunas',
-  PRIMARY KEY (`id_bayar`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-/*Data for the table `bayar` */
-
 /*Table structure for table `data_user` */
 
 DROP TABLE IF EXISTS `data_user`;
@@ -6039,6 +6022,21 @@ CREATE TABLE `pelanggan` (
 
 insert  into `pelanggan`(`id_pelanggan`,`email_pelanggan`,`password_pelanggan`,`nama_pelanggan`,`no_telp`,`alamat_pelanggan`) values 
 (1,'elsa@example.com','12345','elsa','83023013','');
+
+/*Table structure for table `pembayaran` */
+
+DROP TABLE IF EXISTS `pembayaran`;
+
+CREATE TABLE `pembayaran` (
+  `id_pembayaran` varchar(20) NOT NULL,
+  `id_pembelian` varchar(20) DEFAULT NULL,
+  `subtotal` int(50) DEFAULT NULL,
+  `jenis_bayar` varchar(20) DEFAULT NULL,
+  `status` enum('Lunas','Belum Lunas') DEFAULT 'Lunas',
+  PRIMARY KEY (`id_pembayaran`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `pembayaran` */
 
 /*Table structure for table `pembelian` */
 
