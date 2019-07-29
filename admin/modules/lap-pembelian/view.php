@@ -1,7 +1,7 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
-    <i class="fa fa-file-text-o icon-title"></i> Laporan Pembelian Tiket Estu Trans Travel
+    <i class="fa fa-file-text-o icon-title"></i> Laporan Pembelian Toko Sepatu Eko
 
     <a class="btn btn-primary btn-social pull-right" href="modules/lap-pembelian/cetak.php" target="_blank">
       <i class="fa fa-print"></i> Cetak
@@ -24,7 +24,6 @@
                 <th class="center">No.</th>
                 <th class="center">ID Pembelian</th>
                 <th class="center">Tgl Transaksi</th>
-                <th class="center">Jumlah Tiket</th>
                 <th class="center">Subtotal</th>
                 
               </tr>
@@ -34,7 +33,7 @@
             <?php  
             $no = 1;
             // fungsi query untuk menampilkan data dari tabel obat
-            $query = mysqli_query($mysqli, "SELECT id_pembelian,tgl_transaksi,jumlah_tiket,subtotal FROM pembelian ORDER BY id_pembelian ASC")
+            $query = mysqli_query($mysqli, "SELECT id_pembelian,tgl_transaksi,total FROM pembelian ORDER BY id_pembelian ASC")
                                             or die('Ada kesalahan pada query tampil Data Pembelian: '.mysqli_error($mysqli));
 
             // tampilkan data
@@ -46,8 +45,7 @@
                       <td width='30' class='center'>$no</td>
                       <td width='80' class='center'>$data[id_pembelian]</td>
                       <td width='180'>$data[tgl_transaksi]</td>
-                      <td width='180'>$data[jumlah_tiket]</td>
-                      <td width='180'>$data[subtotal]</td>
+                      <td width='180'>$data[total]</td>
 
                     </tr>";
               $no++;

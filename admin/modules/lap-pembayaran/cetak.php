@@ -20,12 +20,12 @@ $count  = mysqli_num_rows($query);
 <html xmlns="http://www.w3.org/1999/xhtml"> <!-- Bagian halaman HTML yang akan konvert -->
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-        <title>LAPORAN PEMBAYARAN TIKET</title>
+        <title>LAPORAN PEMBAYARAN TOKO SEPATU EKO </title>
         <link rel="stylesheet" type="text/css" href="../../assets/css/laporan.css" />
     </head>
     <body>
         <div id="title">
-            LAPORAN PEMBAYARAN TIKET 
+            LAPORAN PEMBAYARAN TOKO SEPATU EKO 
         </div>
         
         <hr><br>
@@ -39,6 +39,7 @@ $count  = mysqli_num_rows($query);
                         <th height="25" align="center" valign="middle">ID Pembelian</th>
                         <th height="25" align="center" valign="middle">Tgl Transaksi</th>
                         <th height="25" align="center" valign="middle">Subtotal</th>
+                        <th height="25" align="center" valign="middle">Jenis Bayar</th>
                         <th height="25" align="center" valign="middle">Status Bayar</th>
                 
                     </tr>
@@ -56,6 +57,7 @@ $count  = mysqli_num_rows($query);
                         <td width='125' height='13' align='center' valign='middle'>$data[id_pembelian]</td>
                         <td style='padding-left:5px;' width='125' height='13' valign='middle'>$data[tgl_transaksi]</td>
                         <td style='padding-left:5px;' width='125' height='13' valign='middle'>$data[subtotal]</td>
+                        <td style='padding-left:5px;' width='125' height='13' valign='middle'>$data[jenis_bayar]</td>
                         <td style='padding-left:5px;' width='125' height='13' valign='middle'>$data[status]</td>
                     </tr>";
             $no++;
@@ -72,7 +74,7 @@ $count  = mysqli_num_rows($query);
             </div>
             
             <div id="footer-nama">
-                Rudi Hermawan, S.T.
+                Eko Prasetyo, S.Kom. 
             </div>
         </div>
     </body>

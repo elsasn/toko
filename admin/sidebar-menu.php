@@ -126,8 +126,7 @@ if ($_SESSION['hak_akses']=='Super Admin') { ?>
   </li>
   <?php
   }
-    // jika menu Laporan Pembelian dipilih, menu Laporan Pembelian aktif
-  if ($_GET["module"]=="lap") { ?>
+if ($_GET["module"]=="grafik") { ?>
   <li class="active treeview">
     <a href="javascript:void(0);">
       <i class="fa fa-file-text"></i> <span>Laporan</span> <i class="fa fa-angle-left pull-right"></i>
@@ -142,7 +141,7 @@ if ($_SESSION['hak_akses']=='Super Admin') { ?>
   <?php
     }
     // jika menu Laporan obat Masuk dipilih, menu Laporan obat Masuk aktif
-  elseif ($_GET["module"]=="lap") { ?>
+  elseif ($_GET["module"]=="grafik") { ?>
   <li class="active treeview">
     <a href="javascript:void(0);">
       <i class="fa fa-file-text"></i> <span>Laporan</span> <i class="fa fa-angle-left pull-right"></i>
@@ -151,6 +150,22 @@ if ($_SESSION['hak_akses']=='Super Admin') { ?>
       <li class="active"><a href="?module=lap-pembelian"><i class="fa fa-circle-o"></i> Laporan pembelian </a></li>
       <li><a href="?module=lap-pembayaran"><i class="fa fa-circle-o"></i> Laporan Pembayaran </a></li>
       <li><a href="?module=lap-pengiriman"><i class="fa fa-circle-o"></i> Laporan pengiriman </a></li>
+    </ul>
+  </li>
+  <?php
+    }
+
+    // jika menu Laporan tidak dipilih, menu Laporan tidak aktif
+  else { ?>
+  <li class="treeview">
+    <a href="javascript:void(0);">
+      <i class="fa fa-file-text"></i> <span>Laporan</span> <i class="fa fa-angle-left pull-right"></i>
+    </a>
+    <ul class="treeview-menu">
+      <li class="active"><a href="?module=lap-pembelian"><i class="fa fa-circle-o"></i> Laporan pembelian </a></li>
+      <li><a href="?module=lap-pembayaran"><i class="fa fa-circle-o"></i> Laporan Pembayaran </a></li>
+      <li><a href="?module=lap-pengiriman"><i class="fa fa-circle-o"></i> Laporan pengiriman </a></li>
+      
     </ul>
   </li>
   <?php

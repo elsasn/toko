@@ -13,19 +13,19 @@ $hari_ini = date("d-m-Y");
 
 $no = 1;
 // fungsi query untuk menampilkan data dari tabel pembelian
-$query = mysqli_query($mysqli, "SELECT id_pembatalan,id_pembelian,tgl_pembatalan,jumlah_tiket,subtotal FROM pembatalan ORDER BY id_pembatalan ASC")
-                                or die('Ada kesalahan pada query tampil Data PEMBATALAN: '.mysqli_error($mysqli));
+$query = mysqli_query($mysqli, "SELECT * FROM pengiriman ORDER BY id_pengiriman ASC")
+                                or die('Ada kesalahan pada query tampil Data pengiriman: '.mysqli_error($mysqli));
 $count  = mysqli_num_rows($query);
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml"> <!-- Bagian halaman HTML yang akan konvert -->
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-        <title>LAPORAN PEMBATALAN TIKET</title>
+        <title>LAPORAN PENGIRIMAN SEPATU</title>
         <link rel="stylesheet" type="text/css" href="../../assets/css/laporan.css" />
     </head>
     <body>
         <div id="title">
-            LAPORAN PEMBATALAN TIKET
+            LAPORAN PENGIRIMAN SEPATU
         </div>
         
         <hr><br>
@@ -35,11 +35,11 @@ $count  = mysqli_num_rows($query);
                 <thead style="background:#e8ecee">
                     <tr class="tr-title">
                         <th height="20" align="center" valign="middle">NO.</th>
-                        <th height="20" align="center" valign="middle">ID Pembatalan</th>
+                        <th height="20" align="center" valign="middle">ID Pengiriman</th>
                         <th height="20" align="center" valign="middle">ID Pembelian</th>
-                        <th height="20" align="center" valign="middle">Tgl Pembatalan</th>
-                        <th height="20" align="center" valign="middle">Jumlah Tiket</th>
-                        <th height="20" align="center" valign="middle">Subtotal</th>
+                        <th height="20" align="center" valign="middle">Tanggal Pengiriman</th>
+                        <th height="20" align="center" valign="middle">Tujuan Pengiriman</th>
+                        <th height="20" align="center" valign="middle">Status Pengiriman</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -51,11 +51,11 @@ $count  = mysqli_num_rows($query);
             // menampilkan isi tabel dari database ke tabel di aplikasi
             echo "  <tr>
                         <td width='40' height='13' align='center' valign='middle'>$no</td>
-                        <td width='80' height='13' align='center' valign='middle'>$data[id_pembatalan]</td>
+                        <td width='80' height='13' align='center' valign='middle'>$data[id_pengiriman]</td>
                         <td width='80' height='13' align='center' valign='middle'>$data[id_pembelian]</td>
-                        <td style='padding-left:5px;' width='150' height='13' valign='middle'>$data[tgl_pembatalan]</td>
-                        <td style='padding-left:5px;' width='150' height='13' valign='middle'>$data[jumlah_tiket]</td>
-                        <td style='padding-left:5px;' width='150' height='13' valign='middle'>$data[subtotal]</td>
+                        <td style='padding-left:5px;' width='150' height='13' valign='middle'>$data[tgl_kirim]</td>
+                        <td style='padding-left:5px;' width='150' height='13' valign='middle'>$data[id_daerah]</td>
+                        <td style='padding-left:5px;' width='150' height='13' valign='middle'>$data[status]</td>
                     </tr>";
             $no++;
         }

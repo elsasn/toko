@@ -1,7 +1,7 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
-    <i class="fa fa-file-text-o icon-title"></i> Laporan Pembatalan Tiket Estu Trans Travel
+    <i class="fa fa-file-text-o icon-title"></i> Laporan Pengiriman Sepatu
 
     <a class="btn btn-primary btn-social pull-right" href="modules/lap-pembatalan/cetak.php" target="_blank">
       <i class="fa fa-print"></i> Cetak
@@ -22,10 +22,11 @@
             <thead>
               <tr>
                 <th class="center">No.</th>
-                <th class="center">ID Pembatalan</th>
-                <th class="center">Tgl Pembatalan</th>
-                <th class="center">Jumlah Tiket</th>
-                <th class="center">Subtotal</th>
+                <th class="center">ID Pengiriman</th>
+                <th class="center">ID Pembelian</th>
+                <th class="center">Tanggal Pengiriman</th>
+                <th class="center">Tujuan Pengiriman</th>
+                <th class="center">Status Pengiriman</th>
                 
               </tr>
             </thead>
@@ -34,7 +35,7 @@
             <?php  
             $no = 1;
             // fungsi query untuk menampilkan data dari tabel obat
-            $query = mysqli_query($mysqli, "SELECT id_pembatalan,tgl_pembatalan,jumlah_tiket,subtotal FROM pembatalan ORDER BY id_pembatalan ASC")
+            $query = mysqli_query($mysqli, "SELECT * FROM pengiriman ORDER BY id_pengiriman ASC")
                                             or die('Ada kesalahan pada query tampil Data Pembatalan: '.mysqli_error($mysqli));
 
             // tampilkan data
@@ -44,10 +45,11 @@
               // menampilkan isi tabel dari database ke tabel di aplikasi
               echo "<tr>
                       <td width='30' class='center'>$no</td>
-                      <td width='80' class='center'>$data[id_pembatalan]</td>
-                      <td width='180'>$data[tgl_pembatalan]</td>
-                      <td width='180'>$data[jumlah_tiket]</td>
-                      <td width='180'>$data[subtotal]</td>
+                      <td width='80' class='center'>$data[id_pengiriman]</td>
+                      <td width='180'>$data[id_pembelian]</td>
+                      <td width='180'>$data[tgl_kirim]</td>
+                      <td width='180'>$data[id_daerah]</td>
+                      <td width='180'>$data[status]</td>
 
                     </tr>";
               $no++;
