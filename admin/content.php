@@ -119,16 +119,16 @@ else {
 		include "modules/pembayaran/form.php";
 	}
 
-	elseif ($_GET['module'] == 'pembatalan') {
-		include "modules/pembatalan/view.php";
+	elseif ($_GET['module'] == 'pengiriman') {
+		include "modules/pengiriman/view.php";
 	}
 	// -----------------------------------------------------------------------------
 	// jika halaman konten yang dipilih laporan obat masuk, panggil file view laporan obat masuk
-	elseif ($_GET['module'] == 'form_pembatalan') {
-		include "modules/pembatalan/form.php";
+	elseif ($_GET['module'] == 'form_pengiriman') {
+		include "modules/pengiriman/form.php";
 	}
-	elseif ($_GET['module'] == 'form_pembatalan2') {
-		include "modules/pembatalan/form2.php";
+	elseif ($_GET['module'] == 'form_pengiriman2') {
+		include "modules/pengiriman/form2.php";
 	}
 
 	//-----------------------------------------------------------------
@@ -150,13 +150,13 @@ else {
 	elseif ($_GET['module'] == 'form_lap-pembayaran') {
 		include "modules/pembayaran/form.php";
 	}
-	elseif ($_GET['module'] == 'lap-pembatalan') {
-		include "modules/lap-pembatalan/view.php";
+	elseif ($_GET['module'] == 'lap-pengiriman') {
+		include "modules/lap-pengiriman/view.php";
 	}
 	// -----------------------------------------------------------------------------
 	// jika halaman konten yang dipilih laporan obat masuk, panggil file view laporan obat masuk
-	elseif ($_GET['module'] == 'form_lap-pembatalan') {
-		include "modules/lap-pembatalan/form.php";
+	elseif ($_GET['module'] == 'form_lap-pengiriman') {
+		include "modules/lap-pengiriman/form.php";
 	}
 
 
