@@ -6057,6 +6057,21 @@ CREATE TABLE `pembelian` (
 
 /*Data for the table `pembelian` */
 
+/*Table structure for table `pengiriman` */
+
+DROP TABLE IF EXISTS `pengiriman`;
+
+CREATE TABLE `pengiriman` (
+  `id_pengiriman` varchar(20) NOT NULL,
+  `id_pembelian` varchar(20) DEFAULT NULL,
+  `tgl_kirim` date DEFAULT NULL,
+  `id_daerah` varchar(20) DEFAULT NULL,
+  `status` enum('Selesai','Pending') DEFAULT NULL,
+  PRIMARY KEY (`id_pengiriman`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `pengiriman` */
+
 /*Table structure for table `produk` */
 
 DROP TABLE IF EXISTS `produk`;
